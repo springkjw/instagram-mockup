@@ -1,65 +1,163 @@
 /* ==============================================
    프로필 페이지 스타일
-   [Step 7] 프로필 페이지
    ============================================== */
 
 /* ---- 프로필 상단 ---- */
-/* TODO: .profile - padding */
+.profile {
+  padding: var(--spacing-lg);
+}
 
+.profile__top {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+}
 
-/* TODO: .profile__top - Flex, 아바타 + 통계 가로 배치 */
+.profile__stats {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
 
+.profile__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-/* TODO: .profile__stats - Flex, 게시물/팔로워/팔로잉 3개 균등 배치 */
+.profile__stat-number {
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+}
 
-
-/* TODO: .profile__stat - 세로 정렬 (숫자 + 라벨)
-   - .profile__stat-number: 굵게, 큰 폰트
-   - .profile__stat-label: 작은 폰트 */
-
+.profile__stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-dark);
+}
 
 /* ---- 바이오 ---- */
-/* TODO: .profile__display-name - font-weight: 600 */
+.profile__info {
+  margin-bottom: var(--spacing-lg);
+}
 
+.profile__display-name {
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
 
-/* TODO: .profile__bio - white-space: pre-line (줄바꿈 유지) */
-
+.profile__bio {
+  white-space: pre-line;
+  font-size: var(--font-size-md);
+}
 
 /* ---- 액션 버튼 ---- */
-/* TODO: .profile__actions - Flex, 두 버튼 균등 배치 */
+.profile__actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
 
+.profile__btn {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-size: var(--font-size-md);
+  text-align: center;
+  background-color: var(--color-bg);
+  border: none;
+}
 
-/* TODO: .profile__btn - flex: 1, 둥근 모서리, 배경색
-   - .profile__btn--primary: 파란색 배경 + 흰 글씨 */
+.profile__btn--primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
 
+.profile__btn--primary:hover {
+  background-color: var(--color-primary-hover);
+}
 
-/* ---- 하이라이트 스토리 ---- */
-/* TODO: .highlights - Flex, 가로 스크롤 */
+/* ---- 하이라이트 ---- */
+.highlights {
+  display: flex;
+  gap: var(--spacing-lg);
+  overflow-x: auto;
+  padding-bottom: var(--spacing-lg);
+}
 
+.highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  flex-shrink: 0;
+}
 
-/* TODO: .highlight - 세로 정렬 (커버 이미지 + 제목) */
+.highlight__cover {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--border-radius-full);
+  object-fit: cover;
+  border: 1px solid var(--color-gray-light);
+}
 
+.highlight__title {
+  font-size: var(--font-size-xs);
+  max-width: 64px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
 
-/* TODO: .highlight__cover - 64x64 원형, border */
+/* ---- 게시물 탭 ---- */
+.profile-tabs {
+  display: flex;
+  border-top: var(--border);
+}
 
+.profile-tabs__tab {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md) 0;
+  color: var(--color-gray);
+  border-top: 1px solid transparent;
+}
 
-/* ---- 게시물 탭 (그리드/태그) ---- */
-/* TODO: .profile-tabs - Flex, 두 탭 균등 배치 */
+.profile-tabs__tab svg {
+  width: 24px;
+  height: 24px;
+}
 
-
-/* TODO: .profile-tabs__tab - 가운데 정렬, 회색
-   - .profile-tabs__tab--active: 상단 border + 검정색 */
-
+.profile-tabs__tab--active {
+  color: var(--color-black);
+  border-top: 1px solid var(--color-black);
+}
 
 /* ---- 게시물 그리드 (3열) ---- */
-/* TODO: .post-grid 를 만드세요
-   - display: grid
-   - grid-template-columns: repeat(3, 1fr)
-   - gap: 2px */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
 
+.post-grid__item {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
 
-/* TODO: .post-grid__item - aspect-ratio: 1/1, overflow: hidden */
+.post-grid__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-
-/* TODO: .post-grid__image - width/height 100%, object-fit: cover */
-
+.post-grid__empty {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--color-gray);
+  grid-column: 1 / -1;
+}

@@ -1,84 +1,159 @@
 /**
  * feed.js - 피드 페이지 기능
  * 스토리 렌더링, 게시물 렌더링, 좋아요/북마크 토글
- * [Step 5~6] JS 기초 + 인터랙션
  */
 
-/**
- * 스토리 바 렌더링
- * stories.json 데이터를 가져와 스토리 아이템을 생성한다
- *
- * TODO: 스토리 렌더링 함수를 구현하세요
- *  1. document.getElementById('stories')로 컨테이너 가져오기
- *  2. fetchJSON('data/stories.json')으로 데이터 로딩
- *  3. forEach로 각 스토리를 DOM에 추가:
- *     - div.story 생성 (isOwnStory면 'story--own' 클래스 추가)
- *     - 새 스토리(hasNewStory)면 그라디언트 링(.story-ring) 적용
- *     - 아바타 이미지 + 유저네임 표시
- *     - appendChild로 컨테이너에 추가
- */
 async function renderStories() {
+  const container = document.getElementById('stories');
+  const stories = await fetchJSON('data/stories.json');
+  if (!stories) return;
 
+  stories.forEach(story => {
+    const div = document.createElement('div');
+    div.className = `story${story.isOwnStory ? ' story--own' : ''}`;
+
+    const ringHTML = story.hasNewStory
+      ? `<div class="story-ring"><div class="story-ring__inner"><img src="${story.avatar}" alt="${story.username}" class="avatar avatar--md"></div></div>`
+      : `<img src="${story.avatar}" alt="${story.username}" class="avatar avatar--md">`;
+
+    div.innerHTML = `
+      ${ringHTML}
+      <span class="story__username">${story.username}</span>
+    `;
+
+    container.appendChild(div);
+  });
 }
 
-/**
- * 게시물 피드 렌더링
- * posts.json 데이터를 가져와 게시물 카드를 생성한다
- *
- * TODO: 게시물 렌더링 함수를 구현하세요
- *  1. document.getElementById('feed')로 컨테이너 가져오기
- *  2. fetchJSON('data/posts.json')으로 데이터 로딩
- *  3. forEach로 각 게시물을 DOM에 추가:
- *     - article.post 생성, dataset.postId 설정
- *     - innerHTML로 게시물 구조 설정:
- *       ┌ post__header (아바타 + 유저네임 + 위치 + 더보기)
- *       ├ post__image-wrapper (이미지 + 하트 오버레이)
- *       ├ post__actions (좋아요/댓글/공유/북마크 버튼)
- *       │  - data-action="like" / data-action="bookmark" 속성
- *       │  - isLiked면 'post__action-btn--liked' 클래스
- *       │  - isBookmarked면 'post__action-btn--bookmarked' 클래스
- *       ├ post__likes (좋아요 수 - formatNumber 사용)
- *       ├ post__caption (유저네임 + 캡션 텍스트)
- *       ├ post__comments-link (댓글 N개 모두 보기)
- *       ├ post__comment (댓글 미리보기 최대 2개)
- *       └ post__timestamp (getRelativeTime 사용)
- */
 async function renderPosts() {
+  const container = document.getElementById('feed');
+  const posts = await fetchJSON('data/posts.json');
+  if (!posts) return;
 
+  posts.forEach(post => {
+    const article = document.createElement('article');
+    article.className = 'post';
+    article.dataset.postId = post.id;
+
+    const commentsHTML = post.comments.slice(0, 2).map(c =>
+      `<div class="post__comment"><span class="post__comment-username">${c.username}</span>${c.text}</div>`
+    ).join('');
+
+    article.innerHTML = `
+      <div class="post__header">
+        <div class="post__user">
+          <div class="story-ring">
+            <div class="story-ring__inner">
+              <img src="${post.userAvatar}" alt="${post.username}" class="avatar avatar--sm">
+            </div>
+          </div>
+          <div class="post__user-info">
+            <span class="post__username">${post.username}</span>
+            ${post.location ? `<span class="post__location">${post.location}</span>` : ''}
+          </div>
+        </div>
+        <button class="post__more" aria-label="더보기">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20">
+            <circle cx="12" cy="5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="19" r="1"/>
+          </svg>
+        </button>
+      </div>
+      <div class="post__image-wrapper">
+        <img src="${post.image}" alt="게시물 이미지" class="post__image" loading="lazy">
+        <div class="post__heart-overlay">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="80" height="80">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="post__actions">
+        <div class="post__actions-left">
+          <button class="post__action-btn${post.isLiked ? ' post__action-btn--liked' : ''}" data-action="like" aria-label="좋아요">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </button>
+          <button class="post__action-btn" aria-label="댓글">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </button>
+          <button class="post__action-btn" aria-label="공유">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </div>
+        <button class="post__action-btn${post.isBookmarked ? ' post__action-btn--bookmarked' : ''}" data-action="bookmark" aria-label="저장">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+          </svg>
+        </button>
+      </div>
+      <div class="post__likes">좋아요 <span class="post__likes-count">${formatNumber(post.likes)}</span>개</div>
+      <div class="post__caption">
+        <span class="post__caption-username">${post.username}</span>${post.caption}
+      </div>
+      ${post.commentCount > 2 ? `<a href="#" class="post__comments-link">댓글 ${post.commentCount}개 모두 보기</a>` : ''}
+      ${commentsHTML}
+      <div class="post__timestamp">${getRelativeTime(post.timestamp)}</div>
+    `;
+
+    container.appendChild(article);
+  });
 }
 
-/**
- * 좋아요/북마크 토글 (이벤트 위임 패턴)
- * 피드 컨테이너에 하나의 이벤트 리스너만 등록하여 성능 최적화
- *
- * TODO: 이벤트 위임으로 좋아요/북마크 기능을 구현하세요
- *  [좋아요 - click 이벤트]
- *  1. feedContainer에 click 이벤트 리스너 등록
- *  2. e.target.closest('[data-action]')로 클릭된 버튼 찾기
- *  3. data-action이 "like"면:
- *     - classList.toggle('post__action-btn--liked')
- *     - 좋아요 수 증감 (post__likes-count 텍스트 변경)
- *     - classList.add('like-animation') + animationend에서 제거
- *  4. data-action이 "bookmark"면:
- *     - classList.toggle('post__action-btn--bookmarked')
- *
- *  [더블탭 좋아요 - dblclick 이벤트]
- *  1. feedContainer에 dblclick 이벤트 리스너 등록
- *  2. e.target.closest('.post__image-wrapper')로 이미지 영역 확인
- *  3. 아직 좋아요 안 눌렸으면 → likeBtn.click() 트리거
- *  4. 하트 오버레이에 'post__heart-overlay--active' 클래스로 애니메이션
- *     힌트: void overlay.offsetWidth 로 reflow 강제 (애니메이션 재시작)
- */
 function initPostInteractions() {
+  const feedContainer = document.getElementById('feed');
+  if (!feedContainer) return;
 
+  // 좋아요 / 북마크 클릭 (이벤트 위임)
+  feedContainer.addEventListener('click', (e) => {
+    const actionBtn = e.target.closest('[data-action]');
+    if (!actionBtn) return;
+
+    const action = actionBtn.dataset.action;
+    const post = actionBtn.closest('.post');
+
+    if (action === 'like') {
+      actionBtn.classList.toggle('post__action-btn--liked');
+      const likesCount = post.querySelector('.post__likes-count');
+      const currentText = likesCount.textContent.replace(/,/g, '').replace('만', '0000');
+      let num = parseInt(currentText) || 0;
+      num = actionBtn.classList.contains('post__action-btn--liked') ? num + 1 : num - 1;
+      likesCount.textContent = formatNumber(num);
+
+      actionBtn.classList.add('like-animation');
+      actionBtn.addEventListener('animationend', () => {
+        actionBtn.classList.remove('like-animation');
+      }, { once: true });
+    }
+
+    if (action === 'bookmark') {
+      actionBtn.classList.toggle('post__action-btn--bookmarked');
+    }
+  });
+
+  // 더블탭 좋아요
+  feedContainer.addEventListener('dblclick', (e) => {
+    const imageWrapper = e.target.closest('.post__image-wrapper');
+    if (!imageWrapper) return;
+
+    const post = imageWrapper.closest('.post');
+    const likeBtn = post.querySelector('[data-action="like"]');
+    const overlay = imageWrapper.querySelector('.post__heart-overlay');
+
+    if (!likeBtn.classList.contains('post__action-btn--liked')) {
+      likeBtn.click();
+    }
+
+    overlay.classList.remove('post__heart-overlay--active');
+    void overlay.offsetWidth;
+    overlay.classList.add('post__heart-overlay--active');
+  });
 }
 
-/**
- * 페이지 초기화
- * DOM이 준비되면 스토리와 게시물을 렌더링한다
- *
- * TODO: DOMContentLoaded 이벤트에서 아래 함수들을 실행하세요
- *  1. renderStories()와 renderPosts()를 Promise.all로 병렬 실행
- *  2. 렌더링 완료 후 initPostInteractions() 호출
- */
-
+document.addEventListener('DOMContentLoaded', async () => {
+  await Promise.all([renderStories(), renderPosts()]);
+  initPostInteractions();
+});

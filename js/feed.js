@@ -4,6 +4,9 @@
  */
 
 async function renderStories() {
+  // document.getElementById('stories')
+  // → HTML에서 id="stories"인 요소를 찾아 JS 변수에 담음.
+  //   이후 이 변수를 통해 해당 요소의 내용을 바꾸거나 이벤트를 등록할 수 있음.
   const container = document.getElementById('stories');
   const stories = await fetchJSON('data/stories.json');
   if (!stories) return;
@@ -153,6 +156,9 @@ function initPostInteractions() {
   });
 }
 
+// DOMContentLoaded: HTML 파싱이 완료되어 DOM 트리가 준비된 시점에 발생하는 이벤트.
+// 이미지·폰트 등 외부 리소스 로딩은 기다리지 않고, HTML 구조만 완성되면 바로 실행됨.
+// → JS에서 DOM 요소를 안전하게 찾을 수 있는 가장 빠른 타이밍.
 document.addEventListener('DOMContentLoaded', async () => {
   await Promise.all([renderStories(), renderPosts()]);
   initPostInteractions();

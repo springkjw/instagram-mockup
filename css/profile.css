@@ -138,6 +138,11 @@
 
 /* ---- 게시물 그리드 (3열) ---- */
 .post-grid {
+  /* display: grid → 자식 요소들을 격자(그리드) 레이아웃으로 배치
+     grid-template-columns: repeat(3, 1fr)
+       repeat(3, ...)  = 같은 패턴을 3번 반복
+       1fr             = 남은 공간을 1등분 (fraction)
+       → 3칸을 동일한 너비로 나눔. 인스타그램 프로필의 3열 사진 그리드와 동일 */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2px;

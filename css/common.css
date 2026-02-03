@@ -4,6 +4,10 @@
 
 /* 기본 body 스타일 */
 body {
+  /* var()는 variables.css에서 선언한 CSS 변수를 가져오는 함수.
+     예: --font-family: 'Apple SD Gothic Neo', sans-serif; 로 선언해두면
+     여기서 var(--font-family)로 재사용. 값을 한 곳에서 관리하므로
+     폰트를 바꿀 때 variables.css만 수정하면 전체 페이지에 반영됨. */
   font-family: var(--font-family);
   font-size: var(--font-size-md);
   color: var(--color-black);
@@ -174,6 +178,10 @@ body {
 }
 
 /* ---- 좋아요 바운스 애니메이션 ---- */
+/* @keyframes는 애니메이션의 각 시점(%)별 상태를 정의하는 문법.
+   아래는 좋아요 버튼 클릭 시 "커졌다 → 살짝 줄었다 → 원래 크기" 흐름을 만들어
+   통통 튀는 느낌(바운스)을 구현함.
+   정의만으로는 동작하지 않고, animation 속성으로 연결해야 실행됨. */
 @keyframes likeScale {
   0% { transform: scale(1); }
   25% { transform: scale(1.3); }

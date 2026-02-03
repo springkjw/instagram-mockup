@@ -34,6 +34,9 @@ function initSearch() {
   const searchInput = document.getElementById('searchInput');
 
   searchInput.addEventListener('input', () => {
+    // .trim()       = 앞뒤 공백 제거 (예: "  고양이 " → "고양이")
+    // .toLowerCase() = 전부 소문자로 변환 (예: "Cat" → "cat")
+    // → 사용자가 대소문자나 공백을 다르게 입력해도 검색 결과가 동일하게 나오도록
     const query = searchInput.value.trim().toLowerCase();
 
     if (!query) {

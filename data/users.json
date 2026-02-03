@@ -4,11 +4,11 @@
     "username": "springkjw",
     "displayName": "권재원",
     "avatar": "https://i.pravatar.cc/150?img=11",
-    "bio": "풀스택 20회차 강사 👨‍🏫\n코딩으로 세상을 만드는 개발자 💻\n#KAIST #Software Engineer",
+    "bio": "#KAIST #Software Engineer",
     "stats": {
-      "posts": 42,
-      "followers": 1283,
-      "following": 356
+      "posts": 5,
+      "followers": 124,
+      "following": 247
     },
     "highlights": [
       { "id": "h1", "title": "일상", "cover": "https://picsum.photos/150/150?random=100" },

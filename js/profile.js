@@ -29,7 +29,7 @@ function renderProfile(user) {
   const actionsHTML = user.isCurrentUser
     ? `<div class="profile__actions">
         <button class="profile__btn">프로필 편집</button>
-        <button class="profile__btn">프로필 공유</button>
+        <button class="profile__btn">보관된 스토리 보기</button>
       </div>`
     : `<div class="profile__actions">
         <button class="profile__btn profile__btn--primary">팔로우</button>
@@ -42,16 +42,16 @@ function renderProfile(user) {
         <img src="${user.avatar}" alt="${user.username}" class="avatar avatar--lg">
         <div class="profile__stats">
           <div class="profile__stat">
-            <span class="profile__stat-number">${formatNumber(user.stats.posts)}</span>
             <span class="profile__stat-label">게시물</span>
+            <span class="profile__stat-number">${formatNumber(user.stats.posts)}</span>
           </div>
           <div class="profile__stat">
-            <span class="profile__stat-number">${formatNumber(user.stats.followers)}</span>
             <span class="profile__stat-label">팔로워</span>
+            <span class="profile__stat-number">${formatNumber(user.stats.followers)}</span>
           </div>
           <div class="profile__stat">
-            <span class="profile__stat-number">${formatNumber(user.stats.following)}</span>
             <span class="profile__stat-label">팔로잉</span>
+            <span class="profile__stat-number">${formatNumber(user.stats.following)}</span>
           </div>
         </div>
       </div>

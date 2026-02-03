@@ -186,23 +186,42 @@ DOM에 렌더링 완료
 
 ## 실행 방법
 
-### VS Code Live Server 사용 (권장)
+이 프로젝트는 `fetch()`로 JSON 데이터를 불러오기 때문에 **로컬 서버**가 필요합니다.
+`file://` 프로토콜로 직접 열면 CORS 에러가 발생합니다.
 
-1. VS Code에서 프로젝트 폴더 열기
-2. Live Server 확장 설치 (`ritwickdey.LiveServer`)
-3. `index.html` 우클릭 → **Open with Live Server**
-
-### Python 간이 서버
+### 1. 프로젝트 클론
 
 ```bash
+git clone https://github.com/springkjw/instagram-mockup.git
 cd instagram-mockup
+```
+
+### 2-A. VS Code Live Server (권장)
+
+1. VS Code에서 프로젝트 폴더 열기
+2. 확장 탭에서 **Live Server** 검색 후 설치 (`ritwickdey.LiveServer`)
+3. 좌측 하단 **Go Live** 클릭 또는 `index.html` 우클릭 → **Open with Live Server**
+4. 브라우저가 자동으로 열림 (기본 `http://127.0.0.1:5500`)
+
+### 2-B. Python 간이 서버
+
+```bash
 python3 -m http.server 8080
 ```
 
 브라우저에서 `http://localhost:8080` 접속
 
-> **참고**: `file://` 프로토콜로 직접 열면 `fetch()`가 CORS 에러를 발생시킵니다.
-> 반드시 로컬 서버를 사용해주세요.
+### 2-C. Node.js (npx)
+
+```bash
+npx serve .
+```
+
+브라우저에서 `http://localhost:3000` 접속
+
+### 서버 종료
+
+터미널에서 `Ctrl + C`를 누르면 서버가 종료됩니다.
 
 ## 이미지 에셋
 

@@ -85,6 +85,24 @@ async function renderPostGrid(userId) {
   });
 }
 
+function initTabs() {
+  const tabs = document.querySelectorAll('.profile-tabs__tab');
+  const postGrid = document.getElementById('postGrid');
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('profile-tabs__tab--active'));
+      tab.classList.add('profile-tabs__tab--active');
+
+      if (index === 0) {
+        postGrid.style.display = 'grid';
+      } else {
+        postGrid.style.display = 'none';
+      }
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   const userId = getUserIdFromURL();
   const users = await fetchJSON('data/users.json');
@@ -95,4 +113,5 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   renderProfile(user);
   await renderPostGrid(userId);
+  initTabs();
 });

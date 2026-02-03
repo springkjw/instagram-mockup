@@ -88,5 +88,75 @@
     "commentCount": 8,
     "timestamp": "2025-01-11T16:00:00Z",
     "location": "카페"
+  },
+  {
+    "id": "post6",
+    "userId": "user1",
+    "username": "springkjw",
+    "userAvatar": "https://i.pravatar.cc/150?img=11",
+    "image": "https://picsum.photos/600/600?random=10",
+    "caption": "KAIST 캠퍼스 산책 🌳 가을이 오면 여기가 진짜 예쁘다",
+    "likes": 89,
+    "isLiked": false,
+    "isBookmarked": false,
+    "comments": [
+      { "username": "lee_soyeon", "text": "캠퍼스 분위기 좋다!", "timestamp": "2025-01-10T11:00:00Z" }
+    ],
+    "commentCount": 5,
+    "timestamp": "2025-01-10T10:00:00Z",
+    "location": "KAIST"
+  },
+  {
+    "id": "post7",
+    "userId": "user1",
+    "username": "springkjw",
+    "userAvatar": "https://i.pravatar.cc/150?img=11",
+    "image": "https://picsum.photos/600/600?random=11",
+    "caption": "오늘의 개발 환경 세팅 완료 ⌨️ 새 모니터가 생산성을 올려준다",
+    "likes": 203,
+    "isLiked": false,
+    "isBookmarked": false,
+    "comments": [
+      { "username": "park_jiwoo", "text": "모니터 뭐야? 나도 바꾸고 싶어", "timestamp": "2025-01-09T15:00:00Z" },
+      { "username": "jung_dohyun", "text": "개발자 감성 👨‍💻", "timestamp": "2025-01-09T16:00:00Z" }
+    ],
+    "commentCount": 12,
+    "timestamp": "2025-01-09T14:00:00Z",
+    "location": "홈오피스"
+  },
+  {
+    "id": "post8",
+    "userId": "user1",
+    "username": "springkjw",
+    "userAvatar": "https://i.pravatar.cc/150?img=11",
+    "image": "https://picsum.photos/600/600?random=12",
+    "caption": "주말 등산 ⛰️ 정상에서 바라본 풍경이 힐링 그 자체",
+    "likes": 178,
+    "isLiked": false,
+    "isBookmarked": false,
+    "comments": [
+      { "username": "choi_yuna", "text": "어디 산이야? 나도 가고 싶다", "timestamp": "2025-01-08T12:00:00Z" }
+    ],
+    "commentCount": 7,
+    "timestamp": "2025-01-08T09:00:00Z",
+    "location": "북한산"
+  },
+  {
+    "id": "post9",
+    "userId": "user1",
+    "username": "springkjw",
+    "userAvatar": "https://i.pravatar.cc/150?img=11",
+    "image": "https://picsum.photos/600/600?random=13",
+    "caption": "커피 한 잔과 함께하는 코딩 타임 ☕ 이 조합은 언제나 옳다",
+    "likes": 134,
+    "isLiked": false,
+    "isBookmarked": false,
+    "comments": [
+      { "username": "lee_soyeon", "text": "분위기 좋다 ☕", "timestamp": "2025-01-07T11:00:00Z" },
+      { "username": "park_jiwoo", "text": "여기 카페 어디야?", "timestamp": "2025-01-07T12:00:00Z" }
+    ],
+    "commentCount": 9,
+    "timestamp": "2025-01-07T10:00:00Z",
+    "location": "스타벅스 대전점"
   }
 ]

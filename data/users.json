@@ -1,10 +1,10 @@
 [
   {
     "id": "user1",
-    "username": "kim_minjun",
-    "displayName": "김민준 🇰🇷",
+    "username": "springkjw",
+    "displayName": "권재원",
     "avatar": "https://i.pravatar.cc/150?img=11",
-    "bio": "서울에서 코딩하는 개발자 💻\n커피와 코드의 하모니 ☕\nDM은 업무 문의만",
+    "bio": "풀스택 20회차 강사 👨‍🏫\n코딩으로 세상을 만드는 개발자 💻\n#KAIST #Software Engineer",
     "stats": {
       "posts": 42,
       "followers": 1283,

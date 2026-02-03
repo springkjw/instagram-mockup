@@ -11,7 +11,7 @@
     "isBookmarked": false,
     "comments": [
       { "username": "park_jiwoo", "text": "와 진짜 예쁘다! 어디야?", "timestamp": "2025-01-15T10:30:00Z" },
-      { "username": "kim_minjun", "text": "색감 대박 👏", "timestamp": "2025-01-15T11:00:00Z" }
+      { "username": "springkjw", "text": "색감 대박 👏", "timestamp": "2025-01-15T11:00:00Z" }
     ],
     "commentCount": 18,
     "timestamp": "2025-01-15T09:00:00Z",
@@ -47,7 +47,7 @@
     "isBookmarked": true,
     "comments": [
       { "username": "lee_soyeon", "text": "와 이거 정말 멋지다... 구매 가능한가요?", "timestamp": "2025-01-13T20:30:00Z" },
-      { "username": "kim_minjun", "text": "색감이 진짜 감성적이다 ✨", "timestamp": "2025-01-13T21:00:00Z" }
+      { "username": "springkjw", "text": "색감이 진짜 감성적이다 ✨", "timestamp": "2025-01-13T21:00:00Z" }
     ],
     "commentCount": 56,
     "timestamp": "2025-01-13T19:00:00Z",
@@ -74,7 +74,7 @@
   {
     "id": "post5",
     "userId": "user1",
-    "username": "kim_minjun",
+    "username": "springkjw",
     "userAvatar": "https://i.pravatar.cc/150?img=11",
     "image": "https://picsum.photos/600/600?random=5",
     "caption": "새 프로젝트 시작! 🚀 이번에는 인스타그램 클론을 만들어봅니다. HTML, CSS, JS만으로 어디까지 할 수 있을까?",

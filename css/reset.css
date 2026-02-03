@@ -11,6 +11,9 @@
 *::after {
   margin: 0;
   padding: 0;
+  /* box-sizing: border-box → 요소의 width/height에 padding과 border를 포함시킴.
+     기본값(content-box)은 padding/border가 별도로 추가되어 크기 계산이 복잡해짐.
+     예: width: 100px + padding: 10px → content-box: 120px, border-box: 100px */
   box-sizing: border-box;
 }
 

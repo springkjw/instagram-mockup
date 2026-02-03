@@ -5,6 +5,10 @@
  */
 
 function getUserIdFromURL() {
+  // URLSearchParams: URL의 쿼리 문자열(?key=value)을 쉽게 파싱하는 내장 객체.
+  //   예: URL이 profile.html?user=user2 일 때
+  //   params.get('user') → "user2"
+  //   || 'user1' → 값이 없으면 기본값 'user1' 사용
   const params = new URLSearchParams(window.location.search);
   return params.get('user') || 'user1';
 }

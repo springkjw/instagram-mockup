@@ -11,6 +11,10 @@ async function renderStories() {
   const stories = await fetchJSON('data/stories.json');
   if (!stories) return;
 
+  // forEach: 배열의 각 요소를 하나씩 꺼내서 함수를 실행.
+  //   story => { ... } 는 화살표 함수로, 각 반복마다 story에 배열 요소가 들어옴.
+  // 템플릿 리터럴: 백틱(`)으로 감싸면 ${변수}로 문자열 안에 값을 삽입할 수 있음.
+  //   예: `안녕 ${name}` → "안녕 홍길동"
   stories.forEach(story => {
     const div = document.createElement('div');
     div.className = `story${story.isOwnStory ? ' story--own' : ''}`;
@@ -112,6 +116,10 @@ function initPostInteractions() {
 
   // 좋아요 / 북마크 클릭 (이벤트 위임)
   feedContainer.addEventListener('click', (e) => {
+    // e.target = 실제 클릭된 요소 (예: SVG 아이콘의 <path>)
+    // .closest('[data-action]') = 클릭된 요소부터 위로 올라가며
+    //   data-action 속성이 있는 가장 가까운 부모를 찾음.
+    //   → 아이콘 내부 어디를 클릭해도 버튼을 정확히 찾을 수 있음 (이벤트 위임)
     const actionBtn = e.target.closest('[data-action]');
     if (!actionBtn) return;
 

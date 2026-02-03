@@ -16,6 +16,9 @@
 //   const response = await fetch(url);  ← 서버 응답이 올 때까지 대기
 //   return await response.json();       ← JSON 파싱이 끝날 때까지 대기
 async function fetchJSON(url) {
+  // try/catch — 에러가 발생할 수 있는 코드를 안전하게 실행하는 문법.
+  //   try 블록 안에서 에러가 나면 catch 블록으로 건너뛰어 에러를 처리.
+  //   네트워크 요청처럼 실패 가능성이 있는 작업에 필수.
   try {
     const response = await fetch(url);
     if (!response.ok) {

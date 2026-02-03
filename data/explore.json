@@ -1,0 +1,20 @@
+[
+  { "id": "e1", "image": "https://picsum.photos/600/600?random=20", "size": "large", "alt": "도시 야경 풍경", "likes": 3421 },
+  { "id": "e2", "image": "https://picsum.photos/600/600?random=21", "size": "small", "alt": "카페 라떼 아트", "likes": 892 },
+  { "id": "e3", "image": "https://picsum.photos/600/600?random=22", "size": "small", "alt": "고양이 낮잠", "likes": 2103 },
+  { "id": "e4", "image": "https://picsum.photos/600/600?random=23", "size": "small", "alt": "해변 서핑", "likes": 1567 },
+  { "id": "e5", "image": "https://picsum.photos/600/600?random=24", "size": "small", "alt": "산 등산 트레킹", "likes": 743 },
+  { "id": "e6", "image": "https://picsum.photos/600/600?random=25", "size": "small", "alt": "강아지 산책", "likes": 4521 },
+  { "id": "e7", "image": "https://picsum.photos/600/600?random=26", "size": "large", "alt": "일본 벚꽃 여행", "likes": 5678 },
+  { "id": "e8", "image": "https://picsum.photos/600/600?random=27", "size": "small", "alt": "홈 트레이닝 운동", "likes": 1234 },
+  { "id": "e9", "image": "https://picsum.photos/600/600?random=28", "size": "small", "alt": "수제 버거 맛집", "likes": 2890 },
+  { "id": "e10", "image": "https://picsum.photos/600/600?random=29", "size": "small", "alt": "노을 하늘 구름", "likes": 1678 },
+  { "id": "e11", "image": "https://picsum.photos/600/600?random=30", "size": "small", "alt": "캠핑 텐트 자연", "likes": 987 },
+  { "id": "e12", "image": "https://picsum.photos/600/600?random=31", "size": "small", "alt": "코딩 프로그래밍 개발", "likes": 654 },
+  { "id": "e13", "image": "https://picsum.photos/600/600?random=32", "size": "large", "alt": "파리 에펠탑 여행", "likes": 7890 },
+  { "id": "e14", "image": "https://picsum.photos/600/600?random=33", "size": "small", "alt": "디저트 케이크 베이킹", "likes": 2345 },
+  { "id": "e15", "image": "https://picsum.photos/600/600?random=34", "size": "small", "alt": "자전거 한강 라이딩", "likes": 1122 },
+  { "id": "e16", "image": "https://picsum.photos/600/600?random=35", "size": "small", "alt": "북카페 독서 책", "likes": 876 },
+  { "id": "e17", "image": "https://picsum.photos/600/600?random=36", "size": "small", "alt": "요가 명상 힐링", "likes": 1543 },
+  { "id": "e18", "image": "https://picsum.photos/600/600?random=37", "size": "small", "alt": "밤하늘 별 천문", "likes": 3210 }
+]

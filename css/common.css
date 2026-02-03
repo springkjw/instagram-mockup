@@ -1,0 +1,107 @@
+/* ==============================================
+   공통 스타일 - 모든 페이지에서 사용하는 컴포넌트
+   [Step 3] CSS 기초
+   ============================================== */
+
+/* 기본 body 스타일 */
+/* TODO: font-family, font-size, color, background-color 을
+   CSS 변수를 이용해 설정하세요 */
+
+
+/* 모바일 컨테이너: 최대 480px, 가운데 정렬 */
+/* TODO: .container 클래스를 만드세요
+   - max-width: var(--max-width)
+   - margin: 0 auto
+   - background-color: white
+   - min-height: 100vh
+   힌트: 481px 이상에서는 좌우 border 추가 (미디어 쿼리) */
+
+
+/* ---- 상단 헤더 (피드 페이지) ---- */
+/* TODO: .header 를 만드세요
+   - position: fixed (스크롤해도 고정)
+   - 가로 중앙 정렬: left: 50% + transform: translateX(-50%)
+   - width: 100%, max-width: var(--max-width)
+   - height: var(--header-height)
+   - Flexbox로 좌우 정렬 (justify-content: space-between)
+   - z-index: 100 */
+
+
+/* TODO: .header__logo - 'Pacifico' 폰트, font-size: var(--font-size-xl) */
+
+
+/* TODO: .header__icons - Flex, gap으로 아이콘 간격 */
+
+
+/* TODO: .header__icon - 24x24 크기 */
+
+
+/* ---- 페이지 헤더 (프로필, 탐색 등) ---- */
+/* TODO: .page-header - .header와 유사하지만 뒤로가기/타이틀/메뉴 3분할 */
+
+
+/* ---- 메인 콘텐츠 영역 ---- */
+/* TODO: .main 클래스를 만드세요
+   - padding-top: var(--header-height)  ← 헤더에 가려지지 않도록
+   - padding-bottom: var(--nav-height)  ← 네비에 가려지지 않도록 */
+
+
+/* ---- 하단 네비게이션 ---- */
+/* TODO: .bottom-nav 를 만드세요
+   - position: fixed, bottom: 0
+   - 가로 중앙 정렬 (헤더와 동일한 방법)
+   - Flexbox로 5개 아이콘 균등 배치 (justify-content: space-around)
+   - border-top으로 구분선 */
+
+
+/* TODO: .bottom-nav__item - 48x48 터치 영역 */
+
+
+/* TODO: .bottom-nav__item--active - 활성 탭 스타일
+   SVG fill 또는 stroke-width 변경 */
+
+
+/* TODO: .bottom-nav__avatar - 24x24 원형 프로필 이미지 */
+
+
+/* ---- 아바타 (프로필 이미지) ---- */
+/* TODO: .avatar 클래스를 만드세요
+   - border-radius: 50%, object-fit: cover
+   - 크기 변형: .avatar--sm(32px), .avatar--md(56px), .avatar--lg(86px) */
+
+
+/* ---- 스토리 링 (그라디언트 테두리) ---- */
+/* TODO: .story-ring 을 만드세요
+   - background: var(--story-gradient)
+   - border-radius: 50%
+   - padding: 2px (그라디언트 두께)
+   힌트: .story-ring__inner에 흰색 배경 + padding: 2px로
+   그라디언트와 아바타 사이 여백 만들기 */
+
+
+/* ---- 좋아요 버튼 애니메이션 (바운스 효과) ---- */
+/* TODO: @keyframes likeScale 를 만드세요
+   0% → scale(1), 25% → scale(1.3), 50% → scale(0.95), 100% → scale(1) */
+
+
+/* TODO: .like-animation 클래스에 위 키프레임 적용 (0.4s) */
+
+
+/* ---- 더블탭 하트 오버레이 애니메이션 ---- */
+/* TODO: @keyframes heartFade 를 만드세요
+   0% → opacity:0 + scale(0)
+   15% → opacity:1 + scale(1.2)
+   30% → scale(1)
+   75% → opacity:1
+   100% → opacity:0 + scale(0) */
+
+
+/* ---- 유틸리티 클래스 ---- */
+/* TODO: .sr-only - 스크린리더 전용 (시각적으로 숨김) */
+
+
+/* 스크롤바 숨김 */
+/* TODO: .hide-scrollbar 를 만드세요
+   - scrollbar-width: none (Firefox)
+   - ::-webkit-scrollbar { display: none } (Chrome/Safari) */
+

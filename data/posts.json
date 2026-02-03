@@ -1,0 +1,92 @@
+[
+  {
+    "id": "post1",
+    "userId": "user2",
+    "username": "lee_soyeon",
+    "userAvatar": "https://i.pravatar.cc/150?img=5",
+    "image": "https://picsum.photos/600/600?random=1",
+    "caption": "오늘의 하늘은 정말 예술이었다 🌅 자연이 주는 선물에 감사하며",
+    "likes": 234,
+    "isLiked": false,
+    "isBookmarked": false,
+    "comments": [
+      { "username": "park_jiwoo", "text": "와 진짜 예쁘다! 어디야?", "timestamp": "2025-01-15T10:30:00Z" },
+      { "username": "kim_minjun", "text": "색감 대박 👏", "timestamp": "2025-01-15T11:00:00Z" }
+    ],
+    "commentCount": 18,
+    "timestamp": "2025-01-15T09:00:00Z",
+    "location": "제주도"
+  },
+  {
+    "id": "post2",
+    "userId": "user3",
+    "username": "park_jiwoo",
+    "userAvatar": "https://i.pravatar.cc/150?img=32",
+    "image": "https://picsum.photos/600/600?random=2",
+    "caption": "주말 브런치 타임 🥞 여기 팬케이크 진짜 맛있어요!",
+    "likes": 567,
+    "isLiked": true,
+    "isBookmarked": false,
+    "comments": [
+      { "username": "choi_yuna", "text": "여기 어디야? 나도 가고 싶어!", "timestamp": "2025-01-14T15:30:00Z" },
+      { "username": "jung_dohyun", "text": "치팅데이 인정 👍", "timestamp": "2025-01-14T16:00:00Z" }
+    ],
+    "commentCount": 32,
+    "timestamp": "2025-01-14T14:00:00Z",
+    "location": "서울 성수동"
+  },
+  {
+    "id": "post3",
+    "userId": "user4",
+    "username": "choi_yuna",
+    "userAvatar": "https://i.pravatar.cc/150?img=9",
+    "image": "https://picsum.photos/600/600?random=3",
+    "caption": "새 작업 완성! 🎨 이번 시리즈는 '도시의 밤'을 주제로 그렸습니다.",
+    "likes": 1289,
+    "isLiked": false,
+    "isBookmarked": true,
+    "comments": [
+      { "username": "lee_soyeon", "text": "와 이거 정말 멋지다... 구매 가능한가요?", "timestamp": "2025-01-13T20:30:00Z" },
+      { "username": "kim_minjun", "text": "색감이 진짜 감성적이다 ✨", "timestamp": "2025-01-13T21:00:00Z" }
+    ],
+    "commentCount": 56,
+    "timestamp": "2025-01-13T19:00:00Z",
+    "location": "작업실"
+  },
+  {
+    "id": "post4",
+    "userId": "user5",
+    "username": "jung_dohyun",
+    "userAvatar": "https://i.pravatar.cc/150?img=53",
+    "image": "https://picsum.photos/600/600?random=4",
+    "caption": "오늘도 운동 완료 💪 꾸준함이 답이다. 3개월 전과 비교하면 확실히 달라졌다!",
+    "likes": 891,
+    "isLiked": false,
+    "isBookmarked": false,
+    "comments": [
+      { "username": "park_jiwoo", "text": "루틴 좀 알려줘! 🙏", "timestamp": "2025-01-12T08:30:00Z" },
+      { "username": "lee_soyeon", "text": "동기부여 된다 진짜", "timestamp": "2025-01-12T09:00:00Z" }
+    ],
+    "commentCount": 24,
+    "timestamp": "2025-01-12T07:00:00Z",
+    "location": "헬스장"
+  },
+  {
+    "id": "post5",
+    "userId": "user1",
+    "username": "kim_minjun",
+    "userAvatar": "https://i.pravatar.cc/150?img=11",
+    "image": "https://picsum.photos/600/600?random=5",
+    "caption": "새 프로젝트 시작! 🚀 이번에는 인스타그램 클론을 만들어봅니다. HTML, CSS, JS만으로 어디까지 할 수 있을까?",
+    "likes": 156,
+    "isLiked": false,
+    "isBookmarked": false,
+    "comments": [
+      { "username": "choi_yuna", "text": "오 대박 완성되면 보여줘!", "timestamp": "2025-01-11T17:30:00Z" },
+      { "username": "jung_dohyun", "text": "코딩하는 거 멋있다 🔥", "timestamp": "2025-01-11T18:00:00Z" }
+    ],
+    "commentCount": 8,
+    "timestamp": "2025-01-11T16:00:00Z",
+    "location": "카페"
+  }
+]

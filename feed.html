@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instogram - 피드</title>
+  <!-- 구글 폰트: 로고용 필기체 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <!-- CSS 파일들 (순서 중요: 리셋 → 변수 → 공통 → 페이지별) -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/feed.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 상단 헤더 -->
+    <header class="header">
+      <h1 class="header__logo">Instogram</h1>
+      <div class="header__icons">
+        <!-- 좋아요 알림 아이콘 -->
+        <button class="header__icon" aria-label="알림">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </button>
+        <!-- DM 메시지 아이콘 -->
+        <button class="header__icon" aria-label="메시지">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="main">
+      <!-- 스토리 바: JS로 동적 렌더링 -->
+      <section class="stories hide-scrollbar" id="stories" aria-label="스토리">
+      </section>
+
+      <!-- 게시물 피드: JS로 동적 렌더링 -->
+      <section class="feed" id="feed" aria-label="피드">
+      </section>
+    </main>
+
+    <!-- 하단 네비게이션 -->
+    <nav class="bottom-nav" aria-label="메인 메뉴">
+      <!-- 홈 -->
+      <a href="feed.html" class="bottom-nav__item bottom-nav__item--active" aria-label="홈">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        </svg>
+      </a>
+      <!-- 탐색 -->
+      <a href="explore.html" class="bottom-nav__item" aria-label="탐색">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </a>
+      <!-- 추가 (새 게시물) -->
+      <a href="#" class="bottom-nav__item" aria-label="새 게시물">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/>
+        </svg>
+      </a>
+      <!-- 좋아요 -->
+      <a href="#" class="bottom-nav__item" aria-label="좋아요">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </a>
+      <!-- 프로필 -->
+      <a href="profile.html" class="bottom-nav__item" aria-label="프로필">
+        <img src="https://i.pravatar.cc/150?img=11" alt="내 프로필" class="bottom-nav__avatar">
+      </a>
+    </nav>
+  </div>
+
+  <!-- JS 파일 (공통 → 페이지별) -->
+  <script src="js/common.js"></script>
+  <script src="js/feed.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/* ==============================================
+   프로필 페이지 스타일
+   [Step 7] 프로필 페이지
+   ============================================== */
+
+/* ---- 프로필 상단 ---- */
+/* TODO: .profile - padding */
+
+
+/* TODO: .profile__top - Flex, 아바타 + 통계 가로 배치 */
+
+
+/* TODO: .profile__stats - Flex, 게시물/팔로워/팔로잉 3개 균등 배치 */
+
+
+/* TODO: .profile__stat - 세로 정렬 (숫자 + 라벨)
+   - .profile__stat-number: 굵게, 큰 폰트
+   - .profile__stat-label: 작은 폰트 */
+
+
+/* ---- 바이오 ---- */
+/* TODO: .profile__display-name - font-weight: 600 */
+
+
+/* TODO: .profile__bio - white-space: pre-line (줄바꿈 유지) */
+
+
+/* ---- 액션 버튼 ---- */
+/* TODO: .profile__actions - Flex, 두 버튼 균등 배치 */
+
+
+/* TODO: .profile__btn - flex: 1, 둥근 모서리, 배경색
+   - .profile__btn--primary: 파란색 배경 + 흰 글씨 */
+
+
+/* ---- 하이라이트 스토리 ---- */
+/* TODO: .highlights - Flex, 가로 스크롤 */
+
+
+/* TODO: .highlight - 세로 정렬 (커버 이미지 + 제목) */
+
+
+/* TODO: .highlight__cover - 64x64 원형, border */
+
+
+/* ---- 게시물 탭 (그리드/태그) ---- */
+/* TODO: .profile-tabs - Flex, 두 탭 균등 배치 */
+
+
+/* TODO: .profile-tabs__tab - 가운데 정렬, 회색
+   - .profile-tabs__tab--active: 상단 border + 검정색 */
+
+
+/* ---- 게시물 그리드 (3열) ---- */
+/* TODO: .post-grid 를 만드세요
+   - display: grid
+   - grid-template-columns: repeat(3, 1fr)
+   - gap: 2px */
+
+
+/* TODO: .post-grid__item - aspect-ratio: 1/1, overflow: hidden */
+
+
+/* TODO: .post-grid__image - width/height 100%, object-fit: cover */
+

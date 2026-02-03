@@ -1,0 +1,74 @@
+/* ==============================================
+   피드 페이지 스타일
+   [Step 4] 피드 CSS (스토리 + 카드)
+   ============================================== */
+
+/* ---- 스토리 바 ---- */
+/* TODO: .stories 를 만드세요
+   - Flex + gap
+   - overflow-x: auto (가로 스크롤)
+   - padding, border-bottom
+   힌트: .hide-scrollbar 클래스와 함께 사용 */
+
+
+/* TODO: .story - 세로 정렬 (flex-direction: column)
+   - flex-shrink: 0 (스크롤 시 찌그러지지 않도록) */
+
+
+/* TODO: .story__username - 작은 폰트, 말줄임 (text-overflow: ellipsis) */
+
+
+/* ---- 게시물 카드 ---- */
+/* TODO: .post - border-bottom으로 카드 구분 */
+
+
+/* TODO: .post__header - Flex, 아바타 + 유저 정보 + 더보기 버튼 */
+
+
+/* TODO: .post__username - font-weight: 600 */
+
+
+/* TODO: .post__location - 작은 폰트, 위치 텍스트 */
+
+
+/* TODO: .post__image-wrapper 를 만드세요
+   - position: relative (하트 오버레이 기준)
+   - aspect-ratio: 1/1 (정사각형)
+   - overflow: hidden */
+
+
+/* TODO: .post__image - width/height 100%, object-fit: cover */
+
+
+/* TODO: .post__heart-overlay 를 만드세요
+   - position: absolute, 이미지 중앙
+   - opacity: 0, pointer-events: none
+   - .post__heart-overlay--active 에 heartFade 애니메이션 적용 */
+
+
+/* TODO: .post__actions - Flex, 좌측(좋아요/댓글/공유) + 우측(북마크) */
+
+
+/* TODO: .post__action-btn - 24x24 아이콘 버튼 */
+
+
+/* TODO: .post__action-btn--liked - SVG fill/stroke를 var(--color-like)로 */
+
+
+/* TODO: .post__action-btn--bookmarked - SVG fill을 black으로 */
+
+
+/* TODO: .post__likes - font-weight: 600, 좌우 padding */
+
+
+/* TODO: .post__caption - 유저네임(굵게) + 캡션 텍스트 */
+
+
+/* TODO: .post__comments-link - 회색 텍스트, "댓글 N개 모두 보기" */
+
+
+/* TODO: .post__comment - 유저네임(굵게) + 댓글 텍스트 */
+
+
+/* TODO: .post__timestamp - 작은 폰트, 회색, 대문자 */
+

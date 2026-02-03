@@ -1,0 +1,77 @@
+[
+  {
+    "id": "user1",
+    "username": "kim_minjun",
+    "displayName": "김민준 🇰🇷",
+    "avatar": "https://i.pravatar.cc/150?img=11",
+    "bio": "서울에서 코딩하는 개발자 💻\n커피와 코드의 하모니 ☕\nDM은 업무 문의만",
+    "stats": {
+      "posts": 42,
+      "followers": 1283,
+      "following": 356
+    },
+    "highlights": [
+      { "id": "h1", "title": "일상", "cover": "https://picsum.photos/150/150?random=100" },
+      { "id": "h2", "title": "개발", "cover": "https://picsum.photos/150/150?random=101" },
+      { "id": "h3", "title": "카페", "cover": "https://picsum.photos/150/150?random=102" },
+      { "id": "h4", "title": "여행", "cover": "https://picsum.photos/150/150?random=103" }
+    ],
+    "isCurrentUser": true
+  },
+  {
+    "id": "user2",
+    "username": "lee_soyeon",
+    "displayName": "이소연",
+    "avatar": "https://i.pravatar.cc/150?img=5",
+    "bio": "포토그래퍼 📸 | 자연을 담다",
+    "stats": {
+      "posts": 128,
+      "followers": 5420,
+      "following": 234
+    },
+    "highlights": [],
+    "isCurrentUser": false
+  },
+  {
+    "id": "user3",
+    "username": "park_jiwoo",
+    "displayName": "박지우",
+    "avatar": "https://i.pravatar.cc/150?img=32",
+    "bio": "맛집 탐방 🍜",
+    "stats": {
+      "posts": 87,
+      "followers": 2310,
+      "following": 412
+    },
+    "highlights": [],
+    "isCurrentUser": false
+  },
+  {
+    "id": "user4",
+    "username": "choi_yuna",
+    "displayName": "최유나",
+    "avatar": "https://i.pravatar.cc/150?img=9",
+    "bio": "일러스트레이터 🎨",
+    "stats": {
+      "posts": 63,
+      "followers": 8912,
+      "following": 187
+    },
+    "highlights": [],
+    "isCurrentUser": false
+  },
+  {
+    "id": "user5",
+    "username": "jung_dohyun",
+    "displayName": "정도현",
+    "avatar": "https://i.pravatar.cc/150?img=53",
+    "bio": "피트니스 & 라이프스타일 💪",
+    "stats": {
+      "posts": 95,
+      "followers": 3456,
+      "following": 289
+    },
+    "highlights": [],
+    "isCurrentUser": false
+  }
+]

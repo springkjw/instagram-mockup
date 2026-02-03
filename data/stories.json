@@ -1,0 +1,58 @@
+[
+  {
+    "id": "story0",
+    "userId": "user1",
+    "username": "내 스토리",
+    "avatar": "https://i.pravatar.cc/150?img=11",
+    "hasNewStory": false,
+    "isOwnStory": true
+  },
+  {
+    "id": "story1",
+    "userId": "user2",
+    "username": "lee_soyeon",
+    "avatar": "https://i.pravatar.cc/150?img=5",
+    "hasNewStory": true,
+    "isOwnStory": false
+  },
+  {
+    "id": "story2",
+    "userId": "user3",
+    "username": "park_jiwoo",
+    "avatar": "https://i.pravatar.cc/150?img=32",
+    "hasNewStory": true,
+    "isOwnStory": false
+  },
+  {
+    "id": "story3",
+    "userId": "user4",
+    "username": "choi_yuna",
+    "avatar": "https://i.pravatar.cc/150?img=9",
+    "hasNewStory": true,
+    "isOwnStory": false
+  },
+  {
+    "id": "story4",
+    "userId": "user5",
+    "username": "jung_dohyun",
+    "avatar": "https://i.pravatar.cc/150?img=53",
+    "hasNewStory": false,
+    "isOwnStory": false
+  },
+  {
+    "id": "story5",
+    "userId": "user6",
+    "username": "travel_kr",
+    "avatar": "https://i.pravatar.cc/150?img=15",
+    "hasNewStory": true,
+    "isOwnStory": false
+  },
+  {
+    "id": "story6",
+    "userId": "user7",
+    "username": "food_diary",
+    "avatar": "https://i.pravatar.cc/150?img=23",
+    "hasNewStory": true,
+    "isOwnStory": false
+  }
+]
